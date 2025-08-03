@@ -1,0 +1,16 @@
+body {background-color: rgb(253, 253, 253);}
+
+h1 {color: rgb(26, 49, 179);}
+h4 {color: black;}
+
+a {color: black;}
+p {color: black;}
+
+div {display: grid;
+    align-items: center;
+    justify-content: center;}
+
+
+.centro{
+    text-align: center;
+}

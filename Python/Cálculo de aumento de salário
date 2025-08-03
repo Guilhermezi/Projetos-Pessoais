@@ -1,0 +1,7 @@
+Salario = int(input("o valor do seu salario ? "))
+Mult = float(input("o valor a ser multiplicado será ? "))
+
+valor_salario0=(Salario * Mult)
+valor_salario1=(Salario + valor_salario0)
+
+print("o valor do seu salario é",valor_salario1)

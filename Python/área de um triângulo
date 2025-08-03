@@ -1,0 +1,7 @@
+t1=int(input("digite o tamanho da base do triângulo "))
+t2=int(input("digite o tamanho da altura do triângulo "))
+
+t3=(t1*t2)
+t4=(t3/2)
+
+print("Á área do triângulo é" ,t4)

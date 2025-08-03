@@ -1,0 +1,5 @@
+Deposito = float  (input("Qual é o valor de deposito ? "))
+
+Rendimento = Deposito * 1.3/100 + Deposito
+
+print (f"O valor do deposito apos um mês de aplicação é: {Rendimento:.2f}")

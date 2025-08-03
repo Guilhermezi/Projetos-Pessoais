@@ -1,0 +1,4 @@
+Lado_Quadrado = int(input("o tamanho de um lado do quadrado "))
+Área_Quadrado = Lado_Quadrado * Lado_Quadrado
+
+print ("o tamanho da area do quadrado é" ,Área_Quadrado)

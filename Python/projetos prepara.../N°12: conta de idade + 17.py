@@ -1,0 +1,5 @@
+variavel = int(input("digite o seu ano de nascimento "))
+v2 = int(input("digite o ano atual "))
+v3 = (v2 - variavel)
+print("sua idade é,", v3)
+print("sua idade daqui 17 anos vai ser" ,v3+17)

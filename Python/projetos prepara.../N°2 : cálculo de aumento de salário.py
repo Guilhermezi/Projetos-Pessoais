@@ -1,0 +1,5 @@
+variavel=int(input("o valor do seu salario ? "))
+variavel2=float(input("o valor a ser multiplicado será ? "))
+valorsalario0=(variavel*variavel2)
+valorsalario1=(variavel+valorsalario0)
+print("o valor do seu salario é",valorsalario1)

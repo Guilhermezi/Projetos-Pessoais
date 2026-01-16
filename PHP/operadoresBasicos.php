@@ -175,4 +175,131 @@ echo $counter++ . "\n";
 
 // 2. Print the current value of $counter
 echo $counter . "\n";
-…?>
+?>
+
+<!-- Precedência de Operadores -->
+ <!-- Quando uma expressão contém múltiplos operadores, o PHP segue uma ordem específica chamada precedência de operadores. Assim como na matemática, multiplicação e divisão são realizadas antes de adição e subtração. -->
+  <?php
+echo 5 + 3 * 2; // Outputs: 11, not 16
+?>
+<!-- O PHP multiplica 3 × 2 primeiro (obtendo 6), depois adiciona 5. Se os operadores tivessem prioridade igual, calcularia da esquerda para a direita: 5 + 3 = 8, depois 8 × 2 = 16. Mas não é assim que funciona.
+
+Aqui está a precedência de maior a menor para os operadores que você aprendeu:
+
+Prioridade	Operadores
+Mais alta	** (exponenciação)
+Alta	* / %
+Baixa	+ -
+
+Para sobrescrever a ordem padrão, use parênteses. Operações dentro de parênteses são sempre avaliadas primeiro:
+
+ -->
+<?php
+echo (5 + 3) * 2;  // Outputs: 16
+echo 2 ** 3 * 2;   // Outputs: 16 (8 * 2)
+echo 2 ** (3 * 2); // Outputs: 64 (2^6)
+?>
+
+
+<?php
+// Read input
+$a = intval(fgets(STDIN));
+$b = intval(fgets(STDIN));
+$c = intval(fgets(STDIN));
+
+// TODO: Write your code below to calculate (a + b) * c ** 2
+$result = ($a + $b) * $c ** 2;
+// Output the result
+echo $result;
+?>
+
+<!-- Resumo - Cálculos Simples -->
+
+<!-- ￼
+Desafio
+
+Fácil
+Leia três números da entrada: basePrice, taxPercent, e quantity.
+
+Calcule o total final executando as seguintes etapas:
+
+Comece com o preço base
+Adicione o imposto multiplicando o preço base por (taxPercent / 100) e adicionando ao preço
+Multiplique o resultado pela quantidade
+Subtraia um desconto fixo de 15 do total
+Finalmente, adicione uma taxa de envio calculada como quantity ** 2
+Imprima o total final.
+
+Exemplo:
+
+Se as entradas forem 50, 10, e 2, a saída deve ser 99 porque:
+
+Preço base: 50
+Adicione imposto de 10%: 50 + (50 * 10 / 100) = 50 + 5 = 55
+Multiplique pela quantidade 2: 55 * 2 = 110
+Subtraia desconto 15: 110 - 15 = 95
+Adicione envio (2 ** 2 = 4): 95 + 4 = 99
+￼
+Explicar desafio
+
+ -->
+
+ <?php
+// Read input
+$basePrice = intval(fgets(STDIN));
+$taxPercent = intval(fgets(STDIN));
+$quantity = intval(fgets(STDIN));
+
+// TODO: Write your code below
+// 1. Start with the base price
+// 2. Add the tax (basePrice * taxPercent / 100)
+$priceWithTax = $basePrice + ($basePrice * $taxPercent / 100);
+// 3. Multiply by quantity
+$total = $priceWithTax * $quantity;
+// 4. Subtract discount of 15
+$total -= 15;
+// 5. Add shipping fee (quantity ** 2)
+$finalTotal = $total + ($quantity ** 2);
+
+// Output the final total
+echo $finalTotal;
+?>
+
+<!-- Operadores de Strings -->
+ <!-- Assim como os números têm operadores aritméticos, as strings têm seus próprios operadores para combinar texto. Você já viu o operador de concatenação (.) em uma lição anterior. Agora vamos olhar para seu contraparte de atribuição combinada.
+
+O operador de atribuição de concatenação (.=) anexa texto a uma variável de string existente, seguindo o mesmo padrão que += para números: -->
+<?php
+$message = "Hello";
+$message = $message . " World"; // O jeito longo
+$message .= "!";                // O jeito abreviado
+echo $message; // Saídas: Hello World!
+?>
+
+<!-- Este operador é particularmente útil ao construir strings peça por peça: -->
+ <?php
+$greeting = "Welcome";
+$greeting .= ", ";
+$greeting .= "John";
+$greeting .= "!";
+echo $greeting; // Saídas: Welcome, John!
+?>
+
+<!-- Lembre-se: use . para juntar strings, e .= para anexar a uma variável de string existente. Estes são os dois operadores de string que você usará com mais frequência no PHP. -->
+
+<?php
+// Read input
+$greeting = trim(fgets(STDIN));
+$name = trim(fgets(STDIN));
+$punctuation = trim(fgets(STDIN));
+
+// TODO: Write your code below
+// Initialize $message with the greeting
+$message = $greeting;
+// Use .= to append a space and the name
+$message .= " " . $name;
+// Use .= to append the punctuation mark
+$message .= $punctuation;
+// Output the result
+echo $message;
+?>

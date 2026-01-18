@@ -48,5 +48,5 @@ fn main() {
     let initial: char = 'C';
     
     // Don't change the line below
-    println!("initial = '{}'", initial);
+    println!("initial = '{}'", initial);--
 }

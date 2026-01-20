@@ -98,3 +98,32 @@ int main() {
 // Saída
 
 // 25.0 degrees Celsius is equal to 77.0 degrees Fahrenheit
+
+/*Desafio
+Crie um programa que:
+
+Declara uma variável float chamada radius
+Declara variáveis double chamadas pi, volume
+Define pi como 3.14159
+Define radius como 1.5
+Calcula o volume de uma esfera usando a fórmula: volume = (4.0/3.0) * pi * radius³.
+Você pode escrevê-lo assim: 4.0/3.0) * pi * radius * radius * radius
+Imprime o resultado com 2 casas decimais no formato:
+The volume of a sphere with radius [radius] is [volume] cubic units
+
+*/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float radius;
+    double pi, volume;
+
+    radius = 1.5;
+    pi = 3.14159;
+    volume = (4.0/3.0) * pi * radius * radius * radius;
+    
+    printf("The volume of a sphere with radius %.2f is %.2f cubic units\n", radius, volume);
+    
+    return 0;
+}

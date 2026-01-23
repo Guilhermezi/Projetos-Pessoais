@@ -1,0 +1,66 @@
+<!-- Em HTML, botões de rádio são usados para criar um conjunto de opções mutuamente exclusivas, onde o usuário pode selecionar apenas uma opção do grupo. Botões de rádio são criados usando a tag <input> com o atributo type definido como "radio".
+
+Aqui está a sintaxe básica para criar um botão de rádio em HTML: -->
+<input type="radio" id="option1" name="radiogroup" value="option1">
+<label for="option1">Option 1</label>
+
+<!--
+<input>: A tag que define o campo de entrada.
+type="radio": Um atributo que especifica o tipo de entrada como um botão de rádio.
+id: Um atributo que dá ao botão de rádio um identificador único.
+name: Um atributo que agrupa botões de rádio juntos. Todos os botões de rádio com o mesmo name pertencem ao mesmo grupo, e apenas uma opção dentro de um grupo pode ser selecionada por vez.
+value: Um atributo que especifica o valor associado ao botão de rádio. Este valor é enviado ao servidor quando o formulário é enviado.
+<label>: Uma tag que fornece um rótulo clicável para o botão de rádio. O atributo for do label deve corresponder ao atributo id do botão de rádio.
+Aqui está um exemplo de como criar um grupo de botões de rádio: -->
+
+<form>
+    <input type="radio" id="option1" name="mygroup" value="option1">
+    <label for="option1">Option 1</label>
+    <br>
+    
+    <input type="radio" id="option2" name="mygroup" value="option2">
+    <label for="option2">Option 2</label>
+    <br>
+    
+    <input type="radio" id="option3" name="mygroup" value="option3">
+    <label for="option3">Option 3</label>
+    <br>
+</form>
+
+<!-- Neste exemplo, temos um formulário com três botões de rádio, todos pertencendo ao mesmo grupo porque compartilham o mesmo atributo name ("mygroup"). Cada botão de rádio tem um id e value únicos, e um rótulo correspondente. Quando o usuário seleciona uma dessas opções e envia o formulário, o valor do botão de rádio selecionado será enviado ao servidor. -->
+
+<!-- 
+Desafio
+
+Fácil
+Crie um documento HTML que inclua um formulário com um grupo de botões de rádio. O formulário deve ter os seguintes elementos:
+
+Um grupo de três botões de rádio com o name "color".
+O primeiro botão de rádio deve ter o id "red", o value "red", e um label com o texto "Red".
+O segundo botão de rádio deve ter o id "green", o value "green", e um label com o texto "Green".
+O terceiro botão de rádio deve ter o id "blue", o value "blue", e um label com o texto "Blue".
+Adicione uma tag <br> após cada label para criar uma quebra de linha.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+</head>
+<body>
+    <form>
+        <input type="radio" id="red" name="color" value="red">
+        <label for="red">Red</label>
+        <br>
+        
+        <input type="radio" id="green" name="color" value="green">
+        <label for="green">Green</label>
+        <br>
+        
+        <input type="radio" id="blue" name="color" value="blue">
+        <label for="blue">Blue</label>
+        <br>
+    </form>
+</body>
+</html>

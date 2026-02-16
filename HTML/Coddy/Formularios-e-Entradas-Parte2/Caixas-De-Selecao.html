@@ -1,0 +1,58 @@
+<!-- Em HTML, caixas de seleção são usadas para criar um conjunto de opções onde o usuário pode selecionar múltiplas opções do grupo. Caixas de seleção são criadas usando a tag <input> com o atributo type definido como "checkbox".
+
+Aqui está a sintaxe básica para criar uma caixa de seleção em HTML: -->
+<input type="checkbox" id="option1" name="checkboxgroup" value="option1">
+<label for="option1">Option 1</label>
+<!-- 
+<input>: A tag que define o campo de entrada.
+type="checkbox": Um atributo que especifica o tipo de entrada como uma caixa de seleção.
+id: Um atributo que dá à caixa de seleção um identificador único.
+name: Um atributo que agrupa caixas de seleção juntas. Diferente dos botões de rádio, múltiplas caixas de seleção com o mesmo name podem ser selecionadas ao mesmo tempo.
+value: Um atributo que especifica o valor associado à caixa de seleção. Este valor é enviado ao servidor quando o formulário é enviado.
+<label>: Uma tag que fornece um rótulo clicável para a caixa de seleção. O atributo for do rótulo deve corresponder ao atributo id da caixa de seleção.
+
+Aqui está um exemplo de como criar um grupo de caixas de seleção: -->
+<form>
+    <input type="checkbox" id="option1" name="mygroup" value="option1">
+    <label for="option1">Option 1</label><br>
+    
+    <input type="checkbox" id="option2" name="mygroup" value="option2">
+    <label for="option2">Option 2</label><br>
+    
+    <input type="checkbox" id="option3" name="mygroup" value="option3">
+    <label for="option3">Option 3</label><br>
+</form>
+<!-- Neste exemplo, temos um formulário com três caixas de seleção, todas pertencentes ao mesmo grupo porque compartilham o mesmo atributo name ("mygroup"). Cada caixa de seleção tem um id e value únicos, e um rótulo correspondente. Quando o usuário seleciona uma ou mais dessas opções e envia o formulário, os valores das caixas de seleção selecionadas serão enviados ao servidor. -->
+
+<!-- Desafio
+
+Fácil
+Crie um documento HTML que inclua um formulário com um grupo de caixas de seleção. O formulário deve ter os seguintes elementos:
+
+Uma tag <form>.
+
+Dentro do formulário, crie um grupo de três caixas de seleção com o nome "toppings".
+
+A primeira caixa de seleção deve ter o id "cheese", o valor "cheese" e um label com o texto "Cheese".
+
+A segunda caixa de seleção deve ter o id "pepperoni", o valor "pepperoni" e um label com o texto "Pepperoni".
+
+A terceira caixa de seleção deve ter o id "mushrooms", o valor "mushrooms" e um label com o texto "Mushrooms".
+
+Adicione uma tag <br> após cada label para criar uma quebra de linha. -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Write code here -->
+        <form>
+            <input type="checkbox" id="cheese" name="toppings"      value="cheese">
+            <label for="cheese">Cheese</label><br>
+
+            <input type="checkbox" id="pepperoni" name="toppings"      value="pepperoni">
+            <label for="pepperoni">Pepperoni</label><br>
+
+            <input type="checkbox" id="mushrooms" name="toppings"      value="mushrooms">
+            <label for="mushrooms">Mushrooms</label><br>
+        </form>
+    </body>
+</html>

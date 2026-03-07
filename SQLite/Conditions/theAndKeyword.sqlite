@@ -1,0 +1,53 @@
+A palavra-chave AND significa que ambas as condições devem ser verdadeiras; se qualquer uma delas não for, então a condição não será atendida.
+
+Por exemplo, aqui está uma tabela <b>people</b>:
+
+name	age	gender
+Joas	13	male
+Holwa	17	male
+Nohlas	24	female
+Polar	23	male
+Loopa	18	female
+ 
+
+A seguinte consulta:
+
+SELECT * 
+FROM people
+WHERE gender = "female" AND age < 20
+significa que estamos procurando todos os registros cujo gênero é "female" e a idade é menor que 20.
+
+Este será o resultado:
+
+name	age	gender
+Loopa	18	female
+ 
+
+Nota: No SQL, valores de string podem ser escritos com aspas duplas "female" ou aspas simples 'female' — ambas são aceitas na maioria dos bancos de dados SQL.
+
+
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+people: name, age, status
+Tabela: people
+
+name	age	status
+Charles	28	employed
+Fatima	38	unemployed
+Eric	11	unemployed
+Diya	44	employed
+Hanna	22	employed
+Ali	20	unemployed
+Gabriel	37	employed
+Beatriz	17	employed
+Troy	29	unemployed
+Angelica	32	employed
+Busque todas as pessoas da tabela people que tenham entre 20 e 28 anos (incluindo 20 e 28).
+
+SELECT * 
+FROM people
+-- Write your code below
+WHERE age >= 20 AND age <= 28;

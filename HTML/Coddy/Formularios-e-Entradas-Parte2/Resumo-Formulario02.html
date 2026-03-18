@@ -1,0 +1,66 @@
+<!-- Desafio
+
+Fácil
+Vamos construir um formulário de registro simples como o da imagem abaixo!
+
+
+Aqui está o que incluir:
+
+Uma tag <form> para envolver tudo junto.
+Um campo Username com um rótulo e um input de texto. O rótulo deve dizer "Username:" e usar for="username". O input deve ter id="username", name="username", type="text", e placeholder "Enter your username".
+Um campo Email com um rótulo e um input de email. O rótulo deve dizer "Email:" e usar for="email". O input deve ter id="email", name="email", type="email", e placeholder "Enter your email".
+Um campo Password com um rótulo e um input de senha. O rótulo deve dizer "Password:" e usar for="userpassword". O input deve ter id="userpassword", name="userpassword", type="password", e placeholder "Enter your password".
+Um grupo de botões de rádio para permitir que os usuários selecionem seu tipo: "Student" ou "Teacher". Adicione um parágrafo ou título que diga "User Type:" acima dos botões de rádio. O botão de rádio "Student" deve ter id="student", name="usertype", value="student", e um rótulo que diga "Student". O botão de rádio "Teacher" deve ter id="teacher", name="usertype", value="teacher", e um rótulo que diga "Teacher". Lembre-se: ambos os botões de rádio devem ter o mesmo atributo name ("usertype") para que apenas um possa ser selecionado por vez.
+Um grupo de caixas de seleção para permitir que os usuários escolham seus interesses: "Sports", "Music", e "Technology". Adicione um parágrafo ou título que diga "Interests:" acima das caixas de seleção. A caixa de seleção "Sports" deve ter id="sports", name="interests", value="sports", e um rótulo que diga "Sports". A caixa de seleção "Music" deve ter id="music", name="interests", value="music", e um rótulo que diga "Music". A caixa de seleção "Technology" deve ter id="technology", name="interests", value="technology", e um rótulo que diga "Technology". Lembre-se: todas as caixas de seleção devem ter o mesmo atributo name ("interests") já que estão no mesmo grupo.
+Um botão Sign Up e um botão Clear no final do formulário. O botão Sign Up deve ter type="submit" e o botão Clear deve ter type="reset". O botão Sign Up deve exibir o texto "Sign Up" e o botão Clear deve exibir o texto “Clear”.
+Certifique-se de incluir rótulos e títulos adequados para uma experiência amigável ao usuário!
+
+Lembre-se, os inputs devem incluir estes atributos importantes: type, id, name, e value. -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <!-- Username -->
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="userpassword" name="userpassword" placeholder="Enter your password">
+            </div>
+
+            <!-- User Type -->
+            <p>User Type:</p>
+            <input type="radio" id="student" name="usertype" value="student">
+            <label for="student">Student</label>
+            <br>
+            <input type="radio" id="teacher" name="usertype" value="teacher">
+            <label for="teacher">Teacher</label>
+
+            <!-- Interests -->
+            <p>Interests:</p>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label>
+            <br>
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label>
+            <br>
+            <input type="checkbox" id="technology" name="interests" value="technology">
+            <label for="technology">Technology</label>
+
+            <br><br>
+            <!-- Action Buttons -->
+            <button type="submit">Sign Up</button>
+            <button type="reset">Clear</button>
+        </form>
+    </body>
+</html>

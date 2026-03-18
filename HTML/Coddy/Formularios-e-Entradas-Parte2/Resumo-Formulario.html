@@ -1,0 +1,55 @@
+<!-- Desafio
+
+Fácil
+Vamos construir um formulário simples de pedido de bebida usando HTML, como mostrado na imagem abaixo.
+Aqui está o que incluir:
+
+Uma tag <form> para envolver tudo.
+Um grupo de botões de rádio (name: "drink") para permitir que os usuários escolham sua bebida. Os rótulos devem ser "Water", "Coke" ou "Sprite".
+Um grupo de caixas de seleção (name: "extras") para complementos opcionais. Os rótulos devem ser "Ice", "Lemon" ou "Sugar".
+Um menu suspenso (name: "size") para escolher o tamanho da bebida. As opções devem ser "Small", "Medium" ou "Large".
+Um botão de envio rotulado "Place Order".
+Um botão de redefinição rotulado "Clear".
+⚠️ Importante: Use apenas uma tag <form>. O HTML não permite tags <form> aninhadas — colocar uma <form> dentro de outra <form> é inválido e fará com que seus inputs sejam detectados fora do formulário, quebrando os testes. Coloque todos os seus botões de rádio, caixas de seleção, menu suspenso e botões diretamente dentro da única tag <form> externa — não envolva seções em tags <form> extras.
+ -->
+    <!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <p>Select a drink:</p>
+            <!-- Botões de Rádio -->
+            <input type="radio" id="water" name="drink" value="Water">
+            <label for="water">Water</label><br>
+            
+            <input type="radio" id="coke" name="drink" value="Coke">
+            <label for="coke">Coke</label><br>
+            
+            <input type="radio" id="sprite" name="drink" value="Sprite">
+            <label for="sprite">Sprite</label>
+
+            <p>Select extras:</p>
+            <!-- Caixas de Seleção -->
+            <input type="checkbox" id="ice" name="extras" value="Ice">
+            <label for="ice">Ice</label><br>
+            
+            <input type="checkbox" id="lemon" name="extras" value="Lemon">
+            <label for="lemon">Lemon</label><br>
+    
+            <input type="checkbox" id="sugar" name="extras" value="Sugar">
+            <label for="sugar">Sugar</label>
+
+            <p>Select size:</p>
+            <!-- Menu Suspenso -->
+            <select name="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+
+            <br><br>
+            <!-- Botões de Ação -->
+            <button type="submit">Place Order</button>
+            <button type="reset">Clear</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+É importante usar parênteses ao combinar diferentes condições.
+
+Por exemplo, as seguintes consultas parecem semelhantes, mas não são as mesmas:
+
+WHERE age < 30 OR gender = 'female' AND age > 20
+WHERE (age < 30 OR gender = 'female') AND age > 20
+A primeira consulta retorna todas as pessoas com menos de 30 anos (qualquer gênero) mais todas as mulheres com mais de 20 anos.
+
+A segunda consulta retorna apenas pessoas com mais de 20 anos que sejam menores de 30 anos ou mulheres.
+
+
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+people: name, age, status
+Coloque parênteses no lugar correto para que a consulta encontre todas as pessoas aposentadas que sejam maiores de 30 anos OU tenham status seeking.
+
+SELECT * FROM people
+WHERE (age > 30 OR status = 'seeking') AND status = 'retired'

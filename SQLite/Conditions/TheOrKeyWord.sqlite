@@ -1,0 +1,36 @@
+A palavra-chave OR significa que queremos que uma das condições seja verdadeira.
+
+Por exemplo, considere a seguinte tabela <strong>people</strong>:
+
+name	age	gender
+Joas	13	male
+Holwa	17	male
+Nohlas	24	female
+Polar	23	male
+Loopa	18	female
+SELECT * 
+FROM people
+WHERE gender = 'female' OR age < 20
+Esta consulta significa que estamos procurando todos os registros nos quais o gênero é female ou a idade é menor que 20.
+
+Este será o resultado:
+
+name	age	gender
+Joas	13	male
+Holwa	17	male
+Nohlas	24	female
+Loopa	18	female
+
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+people: age, status
+Busque todas as pessoas com idade inferior a 20 ou superior a 28 (não incluindo 20 e não incluindo 28).
+
+
+SELECT * 
+FROM people
+-- Write your code below
+WHERE age < 20 or age > 28

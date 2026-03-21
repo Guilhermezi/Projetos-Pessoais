@@ -1,0 +1,25 @@
+Criar uma consulta com apenas uma condição não é suficiente. Às vezes, gostaríamos de verificar algo mais complicado. Para isso, o SQL (e muitas outras linguagens de programação) possui as palavras-chave AND, OR e NOT para aumentar nossa capacidade de obter o resultado certo que precisamos.
+
+As palavras-chave AND e OR são usadas assim:
+
+SELECT col1, col2 
+FROM table1
+WHERE condition1 AND condition2 OR condition3 ...
+Podemos combinar quantas condições quisermos.
+
+
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+candies: name, price, color, weight
+Escreva uma consulta para encontrar todos os doces que sejam:
+
+brown e custem 2 OU
+mixed e pesem menos de 40
+A consulta deve retornar apenas o nome e a cor desses doces.
+SELECT name, color 
+FROM candies
+-- Write your code below
+WHERE color = 'brown' and price = 2 or color = 'mixed' and weight < 40

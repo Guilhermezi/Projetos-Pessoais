@@ -1,0 +1,25 @@
+Condições são booleanos. Booleano é um tipo de dados com dois valores possíveis: TRUE ou FALSE.
+
+Por exemplo
+
+10 > 100 - FALSO
+10 > 5 - VERDADEIRO
+10 > 5 AND 100 < 5 - FALSO
+Colunas booleanas têm apenas dois valores — ou TRUE ou FALSE. Internamente, TRUE é representado como 1 e FALSE é representado como 0.
+
+Podemos representar estados binários como empregado (1) ou desempregado (0) em uma única coluna booleana, onde cada linha contém um valor — ou 1 ou 0. Isso facilita o filtro de dados. Para filtrar dados usando booleanos, usaremos as palavras-chave IS TRUE ou IS NOT TRUE.
+
+SELECT *
+FROM table1
+WHERE col1 IS NOT FALSE AND col2 IS TRUE
+
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+objects: id, colorful
+Busque todos os objetos coloridos. Em vez de escrever colorful = 1, tente usar a palavra-chave TRUE.
+
+
+colorful = TRUE

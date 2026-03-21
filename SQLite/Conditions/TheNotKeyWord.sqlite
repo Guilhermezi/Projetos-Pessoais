@@ -1,0 +1,35 @@
+A palavra-chave NOT significa que não queremos que a condição seja atendida.
+
+Por exemplo, considere a seguinte tabela <strong>people</strong>:
+
+name	age	gender
+Joas	13	male
+Holwa	17	male
+Nohlas	24	female
+Polar	23	male
+Loopa	18	female
+SELECT * 
+FROM people
+WHERE NOT gender = 'male'
+Este será o resultado:
+
+name	age	gender
+Nohlas	24	female
+Loopa	18	female
+A palavra-chave NOT basicamente inverte a condição. Por exemplo, as seguintes consultas são equivalentes:
+
+WHERE age > 20
+WHERE NOT age <= 20
+
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+people: name, age, status
+Busque todas as pessoas onde o status NÃO é retired
+
+SELECT *
+FROM PEOPLE
+-- Write your code below
+WHERE NOT status = 'retired'

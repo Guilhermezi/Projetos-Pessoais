@@ -55,7 +55,7 @@ Verifique os casos de teste para ver todas as entradas e as saídas esperadas
 */
 import java.util.Scanner;
 
-public class Main {
+public class If_Else {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int wind = scanner.nextInt(); // Don't change this line

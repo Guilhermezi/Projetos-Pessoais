@@ -13,7 +13,7 @@ System.out.printf("number: %.2f\n",
 */
 import java.util.Scanner;
 
-public class Main {
+public class formattedOutput {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

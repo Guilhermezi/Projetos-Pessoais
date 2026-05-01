@@ -1,0 +1,18 @@
+Desafio
+
+Fácil
+Tabelas e colunas disponíveis:
+
+people: name, age, status
+Busque todas as pessoas que estão entre as idades de 17 e 25 (incluindo 17 e 25) e cujo status é igual a employed.
+
+
+Dica: Você precisará de três condições unidas com AND:
+1. age >= 17
+2. age <= 25
+3. status = 'employed'
+
+SELECT * FROM people 
+WHERE age >= 17 
+  AND age <= 25 
+  AND status = 'employed';

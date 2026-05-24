@@ -1,0 +1,33 @@
+version: '3.8'  # Versão do formato do Docker Compose
+
+services:  # Aqui começam os serviços/containers da aplicação
+
+  web:  # Serviço do servidor web com PHP
+    build: .  # Cria a imagem a partir do Dockerfile da pasta atual
+    container_name: meu_php  # Nome do container para facilitar identificação
+    ports:
+      - "8080:80"  # Mapeia porta 80 do container para 8080 do host
+    volumes:
+      - ./app:/var/www/html  # Sincroniza a pasta local 'app' com a pasta do container
+    depends_on:
+      - db  # Garante que o container do banco de dados inicie antes
+
+  db:  # Serviço do banco de dados MySQL
+    image: mysql:5.7  # Usa a imagem oficial do MySQL versão 5.7
+    container_name: meu_mysql  # Nome do container do banco
+    restart: always  # Reinicia automaticamente se falhar ou Docker reiniciar
+    environment:  # Variáveis de ambiente do MySQL
+      MYSQL_ROOT_PASSWORD: 1234  # Senha do usuário root
+      MYSQL_DATABASE: meubanco  # Banco de dados criado na primeira inicialização
+    ports:
+      - "3306:3306"  # Mapeia porta 3306 do container para o host (MySQL externo)
+
+  phpmyadmin:  # Serviço do PhpMyAdmin (interface web para MySQL)
+    image: phpmyadmin/phpmyadmin  # Imagem oficial do PhpMyAdmin
+    container_name: meu_phpmyadmin  # Nome do container
+    restart: always  # Reinicia automaticamente se falhar
+    ports:
+      - "8081:80"  # Mapeia porta 80 do container para 8081 do host
+    environment:
+      PMA_HOST: db  # Conecta o PhpMyAdmin ao container 'db' (MySQL)
+      

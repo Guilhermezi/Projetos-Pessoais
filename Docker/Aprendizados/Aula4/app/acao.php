@@ -13,7 +13,7 @@
 $host = 'db';
 $user = 'root';
 $pass = '1234';
-$db   = 'meubanco';
+$db   = 'meubanco1';
 
 $conn = new mysqli($host, $user, $pass, $db);
 

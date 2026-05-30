@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: meu_php
+    container_name: meu_php1
     ports:
       - "8080:80"
     volumes:
@@ -17,13 +17,13 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: meubanco
+      MYSQL_DATABASE: meubanco1
     ports:
       - "3306:3306"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: meu_phpmyadmin
+    container_name: meu_phpmyadmin1
     restart: always
     ports:
       - "8081:80"
